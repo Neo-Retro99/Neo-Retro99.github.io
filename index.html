@@ -1,1 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MegaGamer Zone | Descarga Juegos Gratis y Archivos Seguros</title>
+    <!-- Tailwind CSS para diseño moderno, responsivo y ultra veloz -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts con tipografía de estilo Cyberpunk / Gaming -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome para íconos de consolas, descargas y navegación -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0d0f14;
+        }
+        .gaming-title {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        /* Efecto de brillo de neón para los botones y elementos gamer */
+        .neon-border {
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
+        }
+        .neon-border:hover {
+            box-shadow: 0 0 25px rgba(16, 185, 129, 0.4);
+        }
+        .neon-accent {
+            text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+        }
+    </style>
+</head>
+<body class="text-gray-300 min-h-screen flex flex-col selection:bg-emerald-500 selection:text-black">
+
+    <!-- NAVBAR / CABECERA -->
+    <header class="border-b border-gray-800 bg-gray-950/80 backdrop-blur-md sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+            <!-- Logo con estilo Neón -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center text-black font-black text-xl shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-all">
+                    <i class="fa-solid fa-gamepad"></i>
+                </div>
+                <span class="gaming-title text-xl font-bold text-white tracking-wider group-hover:text-emerald-400 transition-colors">
+                    MEGAGAMER<span class="text-emerald-500">ZONE</span>
+                </span>
+            </a>
+
+            <!-- Buscador para que tus usuarios filtren juegos rápidamente -->
+            <div class="hidden md:flex flex-1 max-w-md mx-8">
+                <div class="relative w-full">
+                    <input type="text" placeholder="Buscar juego, mod, APK..." class="w-full bg-gray-900 border border-gray-800 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 rounded-full py-2 px-5 pl-12 text-sm text-white placeholder-gray-500 outline-none transition-all">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-3 text-gray-500"></i>
+                </div>
+            </div>
+
+            <!-- Menú de Categorías rápidas -->
+            <nav class="flex items-center gap-4 text-sm font-semibold">
+                <a href="#pc" class="hover:text-emerald-400 transition-colors hidden sm:inline-block">PC Games</a>
+                <a href="#android" class="hover:text-emerald-400 transition-colors hidden sm:inline-block">Android APK</a>
+                <a href="#emuladores" class="hover:text-emerald-400 transition-colors hidden sm:inline-block">Emuladores</a>
+                <button onclick="openTutorialModal()" class="bg-gray-900 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500 hover:text-black transition-all px-4 py-2 rounded-full flex items-center gap-2">
+                    <i class="fa-solid fa-circle-question"></i> ¿Cómo Descargar?
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- BANNER DE ANUNCIO SUPERIOR (MONETIZACIÓN) -->
+    <!-- Aquí puedes meter un banner horizontal (728x90) de Adsterra, PopAds o Google Ads -->
+    <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 mt-6">
+        <div class="bg-gray-950 border border-dashed border-gray-800 rounded-xl p-4 flex flex-col items-center justify-center min-h-[90px] relative overflow-hidden group">
+            <span class="text-xs uppercase tracking-widest text-gray-600 font-bold mb-1">Publicidad de la Web</span>
+            <div class="text-sm text-emerald-500/60 flex items-center gap-2">
+                <!-- COMENTARIO DE AYUDA: Reemplaza el div de abajo con tu código HTML/JS de anuncios de Adsterra -->
+                <i class="fa-solid fa-rectangle-ad text-lg"></i>
+                <span>Espacio reservado para tu banner publicitario (Fijo o Pop-Under)</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
+
+        <!-- HERO SECTION: JUEGO DESTACADO DEL MES -->
+        <section class="mb-12">
+            <div class="relative rounded-2xl overflow-hidden border border-gray-800 bg-gray-950 neon-border transition-all duration-300">
+                <!-- Imagen de fondo optimizada -->
+                <div class="absolute inset-0 bg-gradient-to-r from-gray-950 via-gray-950/80 to-transparent z-10"></div>
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/3805132622212136559_3" alt="Minecraft Shaders" class="absolute inset-0 w-full h-full object-cover opacity-50 lg:opacity-75">
+                
+                <!-- Contenido -->
+                <div class="relative z-20 px-6 py-12 md:p-16 max-w-xl flex flex-col items-start gap-4 h-full justify-center">
+                    <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                        <i class="fa-solid fa-fire mr-1"></i> Destacado de la Semana
+                    </span>
+                    <h1 class="gaming-title text-4xl md:text-5xl font-black text-white leading-tight">
+                        Minecraft PE v1.21.0<br><span class="text-emerald-400">Totalmente Gratis</span>
+                    </h1>
+                    <p class="text-gray-400 text-sm md:text-base leading-relaxed">
+                        Descarga la última versión oficial para Android. Con multiplayer desbloqueado, servidores funcionales, skins gratis y rendimiento de texturas shaders optimizado para gama baja.
+                    </p>
+                    <div class="flex flex-wrap gap-4 text-xs font-bold text-gray-400 my-2">
+                        <span class="bg-gray-900 px-3 py-1.5 rounded-md border border-gray-800"><i class="fa-solid fa-microchip mr-1.5 text-emerald-500"></i>Android 5.0+</span>
+                        <span class="bg-gray-900 px-3 py-1.5 rounded-md border border-gray-800"><i class="fa-solid fa-weight-scale mr-1.5 text-emerald-500"></i>230 MB</span>
+                        <span class="bg-gray-900 px-3 py-1.5 rounded-md border border-gray-800"><i class="fa-solid fa-shield-halved mr-1.5 text-emerald-500"></i>Verificado</span>
+                    </div>
+                    <!-- Botón disparador del Popup Inteligente -->
+                    <!-- Reemplaza el "link" en el onclick por tu link de descarga acortado en Linkvertise -->
+                    <button onclick="triggerDownload('Minecraft Pocket Edition', 'http://googleusercontent.com/image_collection/image_retrieval/3805132622212136559_3', 'https://linkvertise.com/tu-link-de-afiliado-aqui')" class="bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold px-8 py-4 rounded-xl flex items-center gap-3 transition-all scale-100 hover:scale-105 shadow-lg shadow-emerald-500/20">
+                        <i class="fa-solid fa-circle-down text-lg"></i> DESCARGAR AHORA
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE GRID DE JUEGOS Y ARCHIVOS -->
+        <section class="mb-12">
+            <div class="flex items-center justify-between mb-8">
+                <div class="flex items-center gap-3">
+                    <span class="w-2.5 h-6 bg-emerald-500 rounded-full"></span>
+                    <h2 class="gaming-title text-2xl font-bold text-white tracking-wide">Últimos Archivos Añadidos</h2>
+                </div>
+                <span class="text-emerald-400 text-sm font-semibold hover:underline cursor-pointer">Ver Todos <i class="fa-solid fa-arrow-right ml-1"></i></span>
+            </div>
+
+            <!-- Grid responsiva de cartas de juego -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- TARJETA DE JUEGO 1 -->
+                <div class="bg-gray-950 border border-gray-800 rounded-2xl overflow-hidden flex flex-col hover:border-emerald-500/30 transition-all duration-300 group">
+                    <!-- Contenedor Imagen -->
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="http://googleusercontent.com/image_collection/image_retrieval/15260535692253703207_0" alt="Minecraft Shaders PC" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+                        <span class="absolute top-4 left-4 bg-emerald-500 text-black text-[10px] font-black px-2.5 py-1 rounded uppercase tracking-wider">PC</span>
+                        <span class="absolute bottom-4 right-4 bg-gray-950/80 backdrop-blur-md text-gray-300 text-xs px-2 py-1 rounded font-semibold"><i class="fa-solid fa-weight-scale text-emerald-400 mr-1"></i> 1.2 GB</span>
+                    </div>
+                    <!-- Contenido Informativo -->
+                    <div class="p-6 flex-grow flex flex-col justify-between gap-4">
+                        <div>
+                            <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors">Minecraft Shaders Pack + Optifine</h3>
+                            <p class="text-gray-400 text-xs mt-2 line-clamp-2">Optimiza tu Minecraft Java en PC con este pack que incluye Optifine y los shaders de ultra realismo listos para instalar.</p>
+                        </div>
+                        <!-- Botón de Descarga que abre el Popup Monetizado -->
+                        <button onclick="triggerDownload('Minecraft Shaders + Optifine', 'http://googleusercontent.com/image_collection/image_retrieval/15260535692253703207_0', 'https://ouo.io/tu-link-de-ouo-aqui')" class="w-full bg-gray-900 border border-gray-800 group-hover:border-emerald-500 group-hover:bg-emerald-500 group-hover:text-black text-gray-300 py-3 rounded-xl font-bold transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-download text-sm"></i> Obtener Enlace de Descarga
+                        </button>
+                    </div>
+                </div>
+
+                <!-- TARJETA DE JUEGO 2 -->
+                <div class="bg-gray-950 border border-gray-800 rounded-2xl overflow-hidden flex flex-col hover:border-emerald-500/30 transition-all duration-300 group">
+                    <!-- Contenedor Imagen -->
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="http://googleusercontent.com/image_collection/image_retrieval/3805132622212136559_0" alt="Emulador PC Setup" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+                        <span class="absolute top-4 left-4 bg-emerald-500 text-black text-[10px] font-black px-2.5 py-1 rounded uppercase tracking-wider">Software</span>
+                        <span class="absolute bottom-4 right-4 bg-gray-950/80 backdrop-blur-md text-gray-300 text-xs px-2 py-1 rounded font-semibold"><i class="fa-solid fa-weight-scale text-emerald-400 mr-1"></i> 85 MB</span>
+                    </div>
+                    <!-- Contenido Informativo -->
+                    <div class="p-6 flex-grow flex flex-col justify-between gap-4">
+                        <div>
+                            <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors">PPSSPP Gold v1.17 (Premium)</h3>
+                            <p class="text-gray-400 text-xs mt-2 line-clamp-2">Descarga el mejor emulador de PSP para Android y PC. Versión Gold totalmente limpia de anuncios molestos y configurado para rendimiento óptimo.</p>
+                        </div>
+                        <!-- Botón de Descarga que abre el Popup Monetizado -->
+                        <button onclick="triggerDownload('PPSSPP Gold Emulador', 'http://googleusercontent.com/image_collection/image_retrieval/3805132622212136559_0', 'https://linkvertise.com/tu-link-de-afiliado-aqui')" class="w-full bg-gray-900 border border-gray-800 group-hover:border-emerald-500 group-hover:bg-emerald-500 group-hover:text-black text-gray-300 py-3 rounded-xl font-bold transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-download text-sm"></i> Obtener Enlace de Descarga
+                        </button>
+                    </div>
+                </div>
+
+                <!-- TARJETA DE JUEGO 3 -->
+                <div class="bg-gray-950 border border-gray-800 rounded-2xl overflow-hidden flex flex-col hover:border-emerald-500/30 transition-all duration-300 group">
+                    <!-- Contenedor Imagen -->
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="http://googleusercontent.com/image_collection/image_retrieval/3805132622212136559_1" alt="GTA V Custom mod" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+                        <span class="absolute top-4 left-4 bg-emerald-500 text-black text-[10px] font-black px-2.5 py-1 rounded uppercase tracking-wider">Android APK</span>
+                        <span class="absolute bottom-4 right-4 bg-gray-950/80 backdrop-blur-md text-gray-300 text-xs px-2 py-1 rounded font-semibold"><i class="fa-solid fa-weight-scale text-emerald-400 mr-1"></i> 145 MB</span>
+                    </div>
+                    <!-- Contenido Informativo -->
+                    <div class="p-6 flex-grow flex flex-col justify-between gap-4">
+                        <div>
+                            <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors">GTA San Andreas Remastered (Mod Cleo)</h3>
+                            <p class="text-gray-400 text-xs mt-2 line-clamp-2">Revive el clásico en tu celular con gráficos mejorados HD, audio original restaurado y el menú Cleo de trucos pre-instalado.</p>
+                        </div>
+                        <!-- Botón de Descarga que abre el Popup Monetizado -->
+                        <button onclick="triggerDownload('GTA SA Remastered APK', 'http://googleusercontent.com/image_collection/image_retrieval/3805132622212136559_1', 'https://linkvertise.com/tu-link-de-afiliado-aqui')" class="w-full bg-gray-900 border border-gray-800 group-hover:border-emerald-500 group-hover:bg-emerald-500 group-hover:text-black text-gray-300 py-3 rounded-xl font-bold transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-download text-sm"></i> Obtener Enlace de Descarga
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- BANNER PUBLICITARIO EN MEDIO DE LA PÁGINA (Aumenta clics de publicidad) -->
+        <section class="mb-12">
+            <div class="bg-gray-950 border border-dashed border-gray-800 rounded-2xl p-6 text-center relative overflow-hidden group">
+                <span class="text-xs uppercase tracking-widest text-gray-600 font-bold block mb-2">PUBLICIDAD RECOMENDADA</span>
+                <div class="text-sm text-gray-400 max-w-lg mx-auto mb-4">
+                    Coloca aquí anuncios nativos, Pop-unders o Banners que paguen por clics de alta calidad (Adsterra / PropellerAds).
+                </div>
+                <!-- REEMPLAZAR AQUÍ CON TU CÓDIGO DE ANUNCIOS -->
+                <div class="h-20 bg-gray-900/60 rounded-xl flex items-center justify-center text-emerald-400/50 text-xs border border-gray-800">
+                    <i class="fa-solid fa-money-bill-trend-up mr-2 text-base"></i> Bloque publicitario dinámico de alto impacto (Anuncios de Redes)
+                </div>
+            </div>
+        </section>
+
+        <!-- INFO SECCIÓN PARA EL USUARIO (FOMENTA CONFIANZA Y SEO) -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-gray-950 p-8 rounded-2xl border border-gray-800">
+            <div>
+                <h2 class="gaming-title text-2xl font-bold text-white mb-4">Descargas Rápidas, Limpias y Verificadas</h2>
+                <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                    Nuestra misión es traerte juegos funcionales, archivos limpios y soluciones tecnológicas rápidas de forma gratuita. Los links dirigen hacia servidores estables como <span class="text-emerald-400 font-semibold">MediaFire</span>, <span class="text-emerald-400 font-semibold">Mega</span> y <span class="text-emerald-400 font-semibold">Google Drive</span>.
+                </p>
+                <div class="flex flex-col gap-2 text-sm text-gray-300">
+                    <span class="flex items-center gap-2 text-emerald-400"><i class="fa-solid fa-shield-virus"></i> Todos los archivos escaneados con antivirus.</span>
+                    <span class="flex items-center gap-2 text-emerald-400"><i class="fa-solid fa-bolt"></i> Servidores con el máximo ancho de banda disponible.</span>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/3805132622212136559_2" alt="Safe PC Setup" class="rounded-xl object-cover h-64 w-full md:max-w-xs border border-gray-800">
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER / PIE DE PÁGINA -->
+    <footer class="bg-gray-950 border-t border-gray-900 py-12 text-sm text-gray-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-emerald-500 text-black flex items-center justify-center rounded font-black">
+                    <i class="fa-solid fa-gamepad"></i>
+                </div>
+                <span class="gaming-title text-md font-bold text-white">MEGAGAMER ZONE</span>
+            </div>
+            <p class="text-center md:text-left text-xs max-w-md">
+                Aviso: Este sitio web es únicamente un índice y comparte enlaces públicos de almacenamiento en la nube para fines demostrativos. No alojamos ningún archivo en nuestros servidores.
+            </p>
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-emerald-400 transition-colors"><i class="fa-solid fa-envelope mr-1.5"></i>Contacto</a>
+                <span>|</span>
+                <span class="text-xs">&copy; 2026 MegaGamer Zone</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE DOWNLOAD MODAL (EL SECRETO DE TU MONETIZACIÓN) -->
+    <!-- Este modal aparece cuando el usuario hace clic en "Descargar" en cualquier juego. -->
+    <div id="downloadModal" class="fixed inset-0 z-50 flex items-center justify-center hidden">
+        <!-- Fondo oscuro semitransparente -->
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-md" onclick="closeDownloadModal()"></div>
+        
+        <!-- Tarjeta del Modal -->
+        <div class="relative bg-gray-950 border border-emerald-500/30 rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl text-center z-10">
+            <!-- Icono decorativo -->
+            <div class="w-16 h-16 bg-emerald-500/10 text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl border border-emerald-500/20">
+                <i class="fa-solid fa-circle-nodes animate-pulse"></i>
+            </div>
+            
+            <h3 class="text-lg font-bold text-white mb-1">¡Preparando tu Descarga!</h3>
+            <p id="modalGameTitle" class="text-sm text-emerald-400 font-semibold mb-4">Nombre del Juego</p>
+
+            <div class="bg-gray-900 border border-gray-800 rounded-xl p-4 text-xs text-left text-gray-400 space-y-2 mb-6">
+                <p class="font-bold text-gray-300 uppercase tracking-wider text-[10px] text-emerald-500 mb-1"><i class="fa-solid fa-circle-exclamation mr-1"></i> Instrucciones de Seguridad</p>
+                <p>1. Al continuar, entrarás a nuestro enlace protegido por anuncios.</p>
+                <p>2. Espera 5 segundos, busca el botón <span class="text-white font-bold">"Skip Ad" / "Free Access"</span> y haz clic.</p>
+                <p>3. **¡Ojo!** Si te pide instalar extensiones de Chrome o descargar archivos con terminación ".exe" extraños, **CIÉRRA LOS ANUNCIOS**. Solo descarga el archivo final de MediaFire o Mega.</p>
+            </div>
+
+            <!-- Contador Dinámico -->
+            <div id="countdownBox" class="mb-6">
+                <span id="countdownText" class="text-sm text-gray-500">Verificando enlaces seguros...</span>
+                <div class="text-3xl font-black text-emerald-400 mt-2" id="timer">5</div>
+            </div>
+
+            <!-- Botón Final (Que se desbloquea tras el temporizador) -->
+            <a id="modalDownloadBtn" href="#" target="_blank" onclick="closeDownloadModal()" class="w-full bg-emerald-500 hover:bg-emerald-400 text-black py-4 rounded-xl font-black transition-all flex items-center justify-center gap-2 text-md shadow-lg shadow-emerald-500/25 pointer-events-none opacity-50">
+                <i class="fa-solid fa-circle-play text-lg"></i> CONTINUAR CON LA DESCARGA
+            </a>
+            
+            <button onclick="closeDownloadModal()" class="text-xs text-gray-600 hover:text-gray-400 transition-colors mt-4 block mx-auto underline">Cancelar descarga</button>
+        </div>
+    </div>
+
+    <!-- TUTORIAL MODAL -->
+    <div id="tutorialModal" class="fixed inset-0 z-50 flex items-center justify-center hidden">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-md" onclick="closeTutorialModal()"></div>
+        <div class="relative bg-gray-950 border border-gray-800 rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl z-10">
+            <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-circle-info text-emerald-500"></i> ¿Cómo saltar los acortadores?
+            </h3>
+            <div class="space-y-4 text-sm text-gray-400 leading-relaxed">
+                <p>Para ofrecerte juegos de forma gratuita, utilizamos acortadores de enlaces monetizados. Así es como se saltan de manera rápida y segura:</p>
+                <ul class="list-disc list-inside space-y-2 pl-2 text-xs">
+                    <li><strong class="text-gray-300">Evita los engaños:</strong> No hagas clic en banners gigantes que digan "DOWNLOAD" o "REPRODUCIR" dentro de las páginas de publicidad.</li>
+                    <li><strong class="text-gray-300">Busca el pase:</strong> Solo busca el cuadro gris que dice <strong class="text-emerald-400">"No soy un robot"</strong> o espera el temporizador de 5 a 10 segundos para hacer clic en <strong class="text-emerald-400">"Get Link" / "Saltar Publicidad"</strong>.</li>
+                    <li><strong class="text-gray-300">Ventanas emergentes:</strong> Si se abre otra pestaña con anuncios molestos, simplemente ciérrala inmediatamente y regresa a la pestaña original.</li>
+                </ul>
+            </div>
+            <button onclick="closeTutorialModal()" class="w-full bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold py-3 rounded-xl mt-6 transition-colors">Entendido, ¡Gracias!</button>
+        </div>
+    </div>
+
+    <!-- LÓGICA DE INTERACTIVIDAD (JAVASCRIPT) -->
+    <script>
+        let countdownTimer;
+
+        // Función para abrir el popup de descarga interactivo
+        function triggerDownload(gameName, gameImage, destinationUrl) {
+            // Actualizar la interfaz del modal
+            document.getElementById('modalGameTitle').innerText = gameName;
+            
+            const btn = document.getElementById('modalDownloadBtn');
+            btn.href = destinationUrl;
+            
+            // Restablecer el temporizador
+            let count = 5;
+            const timerDisplay = document.getElementById('timer');
+            const countdownText = document.getElementById('countdownText');
+            
+            // Deshabilitar botón temporalmente
+            btn.classList.add('pointer-events-none', 'opacity-50');
+            timerDisplay.innerText = count;
+            timerDisplay.classList.remove('hidden');
+            countdownText.innerText = "Preparando servidor de descargas en...";
+
+            // Mostrar el modal
+            document.getElementById('downloadModal').classList.remove('hidden');
+
+            // Iniciar cuenta regresiva
+            clearInterval(countdownTimer);
+            countdownTimer = setInterval(() => {
+                count--;
+                timerDisplay.innerText = count;
+                
+                if (count <= 0) {
+                    clearInterval(countdownTimer);
+                    timerDisplay.classList.add('hidden');
+                    countdownText.innerHTML = '<span class="text-emerald-400 font-bold"><i class="fa-solid fa-circle-check"></i> Enlace listo y verificado!</span>';
+                    
+                    // Activar el botón de descarga para que el usuario pueda avanzar
+                    btn.classList.remove('pointer-events-none', 'opacity-50');
+                }
+            }, 1000);
+        }
+
+        // Funciones auxiliares para cerrar modales
+        function closeDownloadModal() {
+            document.getElementById('downloadModal').classList.add('hidden');
+            clearInterval(countdownTimer);
+        }
+
+        function openTutorialModal() {
+            document.getElementById('tutorialModal').classList.remove('hidden');
+        }
+
+        function closeTutorialModal() {
+            document.getElementById('tutorialModal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
